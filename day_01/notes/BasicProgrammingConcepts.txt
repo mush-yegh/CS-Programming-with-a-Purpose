@@ -1,0 +1,110 @@
+Leecture slides:
+	https://introcs.cs.princeton.edu/java/lectures/keynote/CS.1.Basics.pdf
+Online materials:
+	https://introcs.cs.princeton.edu/java/11hello/
+
+What programming enables you to do is to make a computer do really anything you want.
+Well, almost anything, and we'll talk at the end of the course a little bit about the limitations. 
+
+So, how do we tell the computer what to do? That's programming.
+The thing is it's not just for exports, it's a natural satisfying and creative experience,
+just like writing a sonnet or a paragraph. It's actually easier.
+But the thing about programming is it enables accomplishments that wouldn't be otherwise possible,
+and we're going to see lots of examples to that. 
+
+A programming language is a way of communicating with the computer.
+It's not so easy sometimes to tell a computer what to do and we often find ourselves in this kind of situation.
+But I think a more positive way to look at it, is a quote from Don Knuth leading computer scientists,
+"Instead of imagining that our main task is to instruct a computer what to do,
+what we should do is concentrate on explaining to a human what we want a computer to do." 
+
+At the lowest level, there's machine language, which is the computer's language.
+It's very easy for the computer, but it's pretty detailed and very error-prone for a human to do it.
+
+So, instead, what we use is something in between called a high-level programming language.
+It's a compromise; it's the same difficulty for both the computer and the human.
+The last several decades have shown it's an acceptable tradeoff to get us to be able to tell computers what to do
+
+So, again, there's a naive idea that there's a single programming language that works for all purposes.
+That's just not something that can be realized, and for the same kind of reasons that there's
+no single natural language for us all to communicate with. 
+
+On the other hand, we do like to usually emphasize consistent style.
+If you use the same style all the time, it makes it a little easier to spot errors in your programs.
+The main thing is it makes it easier for other people to read and use the code.
+So, usually in a group of programmers or in a class people agree on using some kind of consistent style.
+So, that they don't get confused by differences in style. 
+
+So just taking a high level view, program development in most programming languages is kind of a three step process with some feedback.
+So the first thing you do is 
+ - edit your program.
+	You create it by typing text on your computers keyboard and eventually you get a text file like HelloWorld.java.
+Then the second you do is 
+ - compile the program, 
+ 	that's translating it from this text format to an executable file suitable for the computer.
+We use a program called the Java compiler and that creates a thing called Java bytecode file, 
+which is called HelloWorld.class. And will be saved on your computer in the same file as HelloWorld.java,
+and that's the one the computer's going to run. 
+And then the third step is you 
+ - run your program.
+And then that's using another part of the Java system called the Java runtime, that
+we invoke from the command line by just typing Java and then the program name.
+And the result of that is that gives the bytecode to the Java machine or the virtual machine that's working on your computer.
+And the end result is your program's output. 
+Now again, maybe your program isn't doing exactly what it thought it was doing and there might be a mistake.
+If there's a mistake in the program then you have to go back to step one to fix it.
+In this case, you've got a legal Java program, but it's doing a wrong thing. So we'll have to go back and change the text 
+file and then recompile it. And then run it again to see if there's no mistakes.
+So it's a little three step process with feedback where usually you edit, compile and run.
+And if there's ever a mistake, you have to go back and edit again, that's program development. 
+
+The computer can help us find mistakes. And so what we talk about in this process is the idea of a program
+development environment, that software that we use for editing, compiling, and running programs.
+Now well there's a lot of different ways to think about program development environments, but I want to talk about two time-tested options.
+One of them called using virtual programs, and that's an approach that works for many different languages and systems.
+It's very effective even for beginners and it's very simple and concise.
+And there's another approach called the integrated development environment, which is often specific to a particular language 
+or family of languages. Sometimes it's useful for beginners, and it gives a variety of useful tools. 
+
+What is a data type?
+Well, it's a very well-defined concept:
+	A data type is a set of values and a set of operations on those values. 
+
+So, now in terms of manipulating data, we have some basic definitions that appear in all our programs.
+So first thing is a thing called a variable, that's a name that refers to a value, 
+
+Then there's a thing called a literal, that's a programming language representation of a value,
+so for an integer literal is a string of digits one to nine and zero to nine.
+Then there's a thing called a declaration statement, that associates a variable with a type. 
+
+The other kind of statement that we're going to use for most of the programs today is called an assignment statement,
+and what that does is associate a value with a variable. 
+
+So, then this last one you can actually combine a declaration and an assignment statement. 
+
+in Java, the set of values for an int are the integers between -2 to the 31st and 2 to the 31st - 1.
+This range has to do with the way the integers are represented within the computer and it's useful for typical applications.
+Again, literals are just strings of digits that represent integers in this range.
+
+a XOR b 
+	(!a && b) || (a && !b)
+
+Type conversion is an essential aspect of programming
+- Automatic 
+	Convert number to string for "+"
+	Make numeric types match if no loss of precision
+- Explicitly
+	Integer.parseInt() and other functions
+- Cast the values that belong to multiple types 
+	small ints can be short, int or long
+	doubles can truncated to int 
+
+There is a lot of commonly used built in data types for Java that we've seen programs that use them.
+There's string for input and output, which is strings of characters.
+There's integers and doubles that we use for science and math calculations and programs.
+And there's boolean, that's computing with true/false values, that we're going to use for decision-making in programs.
+
+So in Java you must declare the types of your variables, that's not true in all programming languages.
+You must convert from one type to another when necessary and you must identify and resolve type errors in order to compile your code.
+Java Compiler will not let you go on if you're doing something like multiplying a string by an integer.
+You have to pay attention to the type of your data. 
