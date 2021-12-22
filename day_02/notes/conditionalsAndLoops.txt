@@ -1,0 +1,24 @@
+Lecture slides:
+	https://introcs.cs.princeton.edu/java/lectures/keynote/CS.2.Loops.pdf
+Online materials:
+	https://introcs.cs.princeton.edu/java/13flow/
+
+The if, while, and for statements are Java's fundamental control structures. 
+
+Before, in the previous lecture, we had what's called a straight line control flow,
+where we just execute one statement after the other, all our programs were of that form.
+With conditionals and loops, we can have a much more complicated control flow that
+enables us to do a much much richer set of calculations,
+and this is the kind of thing that we're going to look at next.
+
+
+Our program that we wrote that showed off the different operations on integers had 
+the possibility of dividing by zero, and if division by zero happened, that program would crash.
+It's much better for the programmer, that's you, to anticipate a condition that would make the program crash,
+and check for it, and take some appropriate action or notify the user or whatever else.
+In this case, if b equals zero, we don't want to try to divide or compute the remainder.
+So, we replace the statement that did the division or computed the remainder with an if-else.
+If that denominator is going to be zero, we print out division by zero, and don't do it.
+Otherwise, we go ahead and do it. That's a much more robust programs of this where we got before.
+It's a good programming practice to use conditionals to check for and avoid run-time errors,
+and that's a good example of it.
