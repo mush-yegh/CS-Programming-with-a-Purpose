@@ -24,12 +24,24 @@ public class ActivationFunction {
     if (Double.isNaN(x)) {
       return Double.NaN;
     }
+    if (x >= 20) {
+      return 1.0;
+    }
+    if (x <= -20) {
+      return -1.0;
+    }
     return (Math.exp(x) - Math.exp(-x)) / (Math.exp(x) + Math.exp(-x));
   }
 
   public static double softsign(double x) {
     if (Double.isNaN(x)) {
       return Double.NaN;
+    }
+    if (x == Double.POSITIVE_INFINITY) {
+      return 1.0;
+    }
+    if (x == Double.NEGATIVE_INFINITY) {
+      return -1.0;
     }
     return x / (1 + Math.abs(x));
   }
